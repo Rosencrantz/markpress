@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'Markpress'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('markpress');
+    expect(app.title).toEqual('Markpress');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to markpress!');
+    expect(compiled.querySelector('h1').textContent).toContain('Markpress!');
   });
 });
