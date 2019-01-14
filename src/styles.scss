@@ -23,6 +23,7 @@
 // --- Components ---
 // Utilities
 @import 'node_modules/foundation-sites/scss/util/util';
+
 // Global styles
 @import 'assets/global';
 @import 'node_modules/foundation-sites/scss/forms/forms';
@@ -148,3 +149,5 @@
   @include foundation-visibility-classes;
   @if $prototype { @include foundation-prototype-classes; }
 }
+
+@include foundation-everything(true,true)

@@ -9,8 +9,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'markpress' })
   ],
   providers: [],
   bootstrap: [AppComponent]
