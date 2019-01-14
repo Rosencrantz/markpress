@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve:ssr",
+    "start": "node dist/server.js",
     "test": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
@@ -11,6 +11,7 @@
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run markpress:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +55,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6",
     "webpack-cli": "^3.2.1"
   },
   "engines": {
