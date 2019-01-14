@@ -3,17 +3,19 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve:ssr",
     "test": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run markpress:server",
-    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "postinstall": "ng build:ssr --aot -prod"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~7.1.2",
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "~7.1.0",
@@ -32,11 +34,11 @@
     "rxjs": "~6.3.3",
     "ts-loader": "^5.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.1.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "~7.1.2",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
     "@types/jasmine": "~2.8.8",
@@ -55,5 +57,9 @@
     "tslint": "~5.11.0",
     "typescript": "~3.1.6",
     "webpack-cli": "^3.2.1"
+  },
+  "engines": {
+    "node": "11.4.0",
+    "npm": "6.5.0"
   }
 }
