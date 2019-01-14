@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
