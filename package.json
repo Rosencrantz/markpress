@@ -11,7 +11,7 @@
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run markpress:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "postinstall": "ng build:ssr --aot -prod"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
