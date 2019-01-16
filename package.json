@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm serve:ssr",
+    "start": "npm run serve:ssr",
     "test": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
